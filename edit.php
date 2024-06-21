@@ -55,10 +55,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifier un Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body{
+        background-color: grey;
+      }
+
+        h2{
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .btn{
+            color: blue;
+            border-bottom: 4px;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5 ">
-        <h1>Modifier un Contact</h1>
+        <h2>Modifier un Contact</h2>
 
         <?php if (!empty($error)): ?>
         <div class="alert alert-danger" role="alert">
@@ -80,8 +95,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="phone" class="form-label">Téléphone</label>
                 <input type="text" class="form-control" id="phone" name="phone" value="<?php echo $contact['phone']; ?>" required>
             </div>
-            <button type="submit" class="btn premiere-btn">Mettre à jour</button>
-            <a href="index.php" class="btn second-btn">Annuler</a>
+            <button type="submit" class="btnbtn-primary">Mettre à jour</button>
+            <a href="index.php" class="btn btn-secondary">Annuler</a>
         </form>
     </div>
 

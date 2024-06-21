@@ -47,16 +47,15 @@ $contacts = $contactManager->getAllContacts();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CRUD App contact </title>
-    <!-- Inclure Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: blue; /* Fond bleu pour tout le body */
-            color: white; /* Texte blanc pour un contraste élevé */
+            background-color: gray; 
+            color: white; 
         }
 
         h1{
-            color: red;
+            color: blue;
             text-align: center;
         }
         
