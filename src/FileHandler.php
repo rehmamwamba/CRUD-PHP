@@ -32,4 +32,4 @@ class FileHandler
         file_put_contents($this->filePath, $jsonData);
     }
 }
-?>
+

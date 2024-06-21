@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 ">
         <h1>Modifier un Contact</h1>
 
         <?php if (!empty($error)): ?>
@@ -68,20 +68,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <form method="post">
             <input type="hidden" name="id" value="<?php echo $contact['id']; ?>">
-            <div class="mb-3">
+            <div class="modifier">
                 <label for="name" class="form-label">Nom</label>
                 <input type="text" class="form-control" id="name" name="name" value="<?php echo $contact['name']; ?>" required>
             </div>
-            <div class="mb-3">
+            <div class="modifier">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" value="<?php echo $contact['email']; ?>" required>
             </div>
-            <div class="mb-3">
+            <div class="modifier">
                 <label for="phone" class="form-label">Téléphone</label>
                 <input type="text" class="form-control" id="phone" name="phone" value="<?php echo $contact['phone']; ?>" required>
             </div>
-            <button type="submit" class="btn btn-primary">Mettre à jour</button>
-            <a href="index.php" class="btn btn-secondary">Annuler</a>
+            <button type="submit" class="btn premiere-btn">Mettre à jour</button>
+            <a href="index.php" class="btn second-btn">Annuler</a>
         </form>
     </div>
 

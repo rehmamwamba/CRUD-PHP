@@ -42,4 +42,4 @@ class Contact {
     public function setPhone($phone) {
         $this->phone = $phone;
     }
-}
+};

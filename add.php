@@ -47,15 +47,15 @@ if (Request::post('action') === 'add') {
 
         <form action="add.php" method="post">
             <input type="hidden" name="action" value="add">
-            <div class="mb-3">
+            <div class="ajout">
                 <label for="name" class="form-label">Nom</label>
                 <input type="text" class="form-control" id="name" name="name" required>
             </div>
-            <div class="mb-3">
+            <div class="ajout">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
-            <div class="mb-3">
+            <div class="ajout">
                 <label for="phone" class="form-label">Téléphone</label>
                 <input type="text" class="form-control" id="phone" name="phone" required>
             </div>

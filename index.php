@@ -64,7 +64,7 @@ $contacts = $contactManager->getAllContacts();
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h1>My CRUD App contact </h1>
 
         <?php if (!empty($message)): ?>

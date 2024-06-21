@@ -29,4 +29,3 @@ Session::setFlash('success', 'Le contact a été supprimé avec succès.');
 // Redirection vers la page d'index
 header('Location: index.php');
 exit;
-?>

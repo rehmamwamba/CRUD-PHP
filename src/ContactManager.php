@@ -72,5 +72,4 @@ class ContactManager
 
         $this->fileHandler->write($contacts);
     }
-}
-?>
+};
