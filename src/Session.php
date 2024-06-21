@@ -1,20 +1,24 @@
 <?php
+
 namespace App;
 
-class Session {
-    public static function start() {
+class Session
+{
+    public static function start()
+    {
         session_start();
     }
 
-    public static function set($key, $value) {
-        $_SESSION[$key] = $value;
+    public static function setFlash($type, $message)
+    {
+        $_SESSION['flash'][$type] = $message;
     }
 
-    public static function get($key, $default = null) {
-        return $_SESSION[$key] ?? $default;
-    }
-
-    public static function destroy() {
-        session_destroy();
+    public static function getFlash($type)
+    {
+        $message = $_SESSION['flash'][$type] ?? null;
+        unset($_SESSION['flash'][$type]);
+        return $message;
     }
 }
+?>

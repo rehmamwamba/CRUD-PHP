@@ -1,4 +1,5 @@
 <?php
+
 // Chargement de l'autoloader de Composer
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -7,18 +8,15 @@ use App\Form;
 use App\Request;
 use App\Session;
 
-// Démarrage de la session
 Session::start();
 
-// Instanciation du gestionnaire de contacts
 $fileHandler = new \App\FileHandler(__DIR__ . '/data/contacts.json');
 $contactManager = new ContactManager($fileHandler);
 
-// Variables pour messages de succès ou d'erreur
 $message = '';
 $error = '';
 
-// Traitement des actions (ajouter, modifier, supprimer)
+// Traitement des actions (ajouter, modifier, supprimer un contact)
 if (Request::post('action') === 'add') {
     $name = Request::post('name');
     $email = Request::post('email');
@@ -51,9 +49,22 @@ $contacts = $contactManager->getAllContacts();
     <title>My CRUD App contact </title>
     <!-- Inclure Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: blue; /* Fond bleu pour tout le body */
+            color: white; /* Texte blanc pour un contraste élevé */
+        }
+
+        h1{
+            color: red;
+            text-align: center;
+        }
+        
+       
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container">
         <h1>My CRUD App contact </h1>
 
         <?php if (!empty($message)): ?>
@@ -62,7 +73,7 @@ $contacts = $contactManager->getAllContacts();
         </div>
         <?php endif; ?>
 
-        <table class="table table-striped">
+        <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>

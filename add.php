@@ -1,5 +1,5 @@
 <?php
-// Chargement de l'autoloader de Composer
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 use App\ContactManager;
@@ -7,14 +7,11 @@ use App\Form;
 use App\Request;
 use App\Session;
 
-// Démarrage de la session
 Session::start();
 
-// Instanciation du gestionnaire de contacts
 $fileHandler = new \App\FileHandler(__DIR__ . '/data/contacts.json');
 $contactManager = new ContactManager($fileHandler);
 
-// Variables pour messages de succès ou d'erreur
 $message = '';
 $error = '';
 
